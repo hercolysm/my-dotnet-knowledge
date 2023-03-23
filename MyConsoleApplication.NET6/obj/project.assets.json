@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "MyLibraryClass.NET6/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MyLibraryClass.NET6.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyLibraryClass.NET6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyLibraryClass.NET6/1.0.0": {
+      "type": "project",
+      "path": "../MyLibraryClass.NET6/MyLibraryClass.NET6.csproj",
+      "msbuildProject": "../MyLibraryClass.NET6/MyLibraryClass.NET6.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "MyLibraryClass.NET6 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\herco\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\herco\\source\\repos\\dotnet-projects\\DOTNET\\MyConsoleApplication.NET6\\MyConsoleApplication.NET6.csproj",
+      "projectName": "MyConsoleApplication.NET6",
+      "projectPath": "C:\\Users\\herco\\source\\repos\\dotnet-projects\\DOTNET\\MyConsoleApplication.NET6\\MyConsoleApplication.NET6.csproj",
+      "packagesPath": "C:\\Users\\herco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\herco\\source\\repos\\dotnet-projects\\DOTNET\\MyConsoleApplication.NET6\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\herco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\herco\\source\\repos\\dotnet-projects\\DOTNET\\MyLibraryClass.NET6\\MyLibraryClass.NET6.csproj": {
+              "projectPath": "C:\\Users\\herco\\source\\repos\\dotnet-projects\\DOTNET\\MyLibraryClass.NET6\\MyLibraryClass.NET6.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
