@@ -1,0 +1,15 @@
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\bin\Debug\net6.0\DOTNET2.exe
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\bin\Debug\net6.0\DOTNET2.deps.json
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\bin\Debug\net6.0\DOTNET2.runtimeconfig.json
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\bin\Debug\net6.0\DOTNET2.dll
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\bin\Debug\net6.0\DOTNET2.pdb
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.csproj.AssemblyReference.cache
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.AssemblyInfoInputs.cache
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.AssemblyInfo.cs
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.csproj.CoreCompileInputs.cache
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.dll
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\refint\DOTNET2.dll
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.pdb
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\DOTNET2.genruntimeconfig.cache
+C:\Users\herco\source\repos\dotnet-projects\DOTNET\DOTNET2\obj\Debug\net6.0\ref\DOTNET2.dll
