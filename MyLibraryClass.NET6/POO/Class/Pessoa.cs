@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace MyLibraryClass.NET6.Models
 {
     /// <summary>
@@ -10,15 +5,16 @@ namespace MyLibraryClass.NET6.Models
     /// </summary>
     public class Pessoa
     {
-        private string _nome;
-        public string SobreNome { get; set; }
-        public string NomeCompleto => $"{Nome} {SobreNome}".ToUpper();
+        private string? _nome;
+        public string? SobreNome { get; set; }
+        public string? NomeCompleto => $"{Nome} {SobreNome}".ToUpper();
         public int Idade { get; set; }
         public decimal Peso { get; set; }
         public double Altura { get; set; } 
         public DateTime DataNascimento { get; set; }
-        public List<Pessoa> Filhos { get; set; }
+        public List<Pessoa>? Filhos { get; set; }
         static public string NomeDaClasse = "Pessoa";
+        public decimal? PodeSerNulo { get; set; }
 
         public string Nome { 
             get => _nome.ToUpper(); 
@@ -44,10 +40,16 @@ namespace MyLibraryClass.NET6.Models
             this.Idade = idade;
         }
 
+        public void Deconstruct(out string nome, out int idade)
+        {
+            nome = this.Nome;
+            idade = this.Idade;
+        }
+
         /// <summary>
         /// Faz a pessoa se apresentar, dizendo o seu nome e a idade
         /// </summary>
-        public void Apresentar()
+        public virtual void Apresentar()
         {
             Console.WriteLine($"Olá, meu nome é {NomeCompleto} e eu tenho {Idade} anos");
         }
