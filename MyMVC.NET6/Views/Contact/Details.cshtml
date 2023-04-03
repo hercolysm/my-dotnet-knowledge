@@ -1,0 +1,32 @@
+@model MyMVC.NET6.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact Details";
+}
+
+<h1>Contact Details</h1>
+
+<div>
+    <div class="row">
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Id)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Id)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Nome)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Status)
+        </div>
+    </div>
+</div>
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> | 
+<a asp-action="Index">Return to list</a>

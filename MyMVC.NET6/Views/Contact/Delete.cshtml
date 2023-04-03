@@ -1,0 +1,35 @@
+@model MyMVC.NET6.Models.Contact
+
+@{
+    ViewData["Title"] = "Delete Contact";
+}
+
+<h1 class="text-alert">Are you sure?</h1>
+<p class="text-alert">You want delete this contact?</p>
+
+<div>
+    <div class="row">
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Id)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Id)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Nome)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status)
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x .Status)
+        </div>
+    </div>
+</div>
+<form asp-action="Delete">
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+<a asp-action="Index">Cancel</a>
