@@ -15,7 +15,7 @@ namespace MyLibraryClass.NET6.Collections
             var array4 = new int[] { 1, 2, 3, 4 };
 
             string[] WeekDays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-            string segunda = WeekDays[0];
+            string monday = WeekDays[0];
 
             for (var i = 0; i < WeekDays.Length; i++) 
             {
