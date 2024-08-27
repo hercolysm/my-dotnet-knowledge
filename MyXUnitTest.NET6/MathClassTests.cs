@@ -2,11 +2,11 @@ using MyLibraryClass.NET6.Classes;
 
 namespace MyXUnitTest.NET6
 {
-    public class MathClasstTests
+    public class MathClassTests
     {
         private readonly MathClass _mathClass;
 
-        public MathClasstTests()
+        public MathClassTests()
         {
             _mathClass = new MathClass();
         }
