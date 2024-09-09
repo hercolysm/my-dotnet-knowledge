@@ -40,5 +40,16 @@ namespace MyLibraryClass.NET6.Classes
         {
             DateTime.Now.AddDays(1);
         }
+
+        public object GetCurrentDateTime()
+        {
+            var obj = new
+            {
+                Data = DateTime.Now.ToLongDateString(),
+                Hora = DateTime.Now.ToShortTimeString()
+            };
+
+            return obj;
+        }
     }
 }

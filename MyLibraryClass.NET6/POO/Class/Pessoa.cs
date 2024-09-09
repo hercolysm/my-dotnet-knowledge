@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace MyLibraryClass.NET6.Models
 {
     /// <summary>
@@ -13,8 +15,13 @@ namespace MyLibraryClass.NET6.Models
         public double Altura { get; set; } 
         public DateTime DataNascimento { get; set; }
         public List<Pessoa>? Filhos { get; set; }
-        static public string NomeDaClasse = "Pessoa";
+        public static string NomeDaClasse = "Pessoa";
         public decimal? PodeSerNulo { get; set; }
+
+        // data annotations
+        [Required(ErrorMessage = "O e-mail é obrigatório")]
+        [EmailAddress(ErrorMessage = "O e-mail é inválido")]
+        public string Email { get; set; }
 
         public string Nome { 
             get => _nome.ToUpper(); 
@@ -27,7 +34,12 @@ namespace MyLibraryClass.NET6.Models
 
                 _nome = value;
             }
-        } 
+        }
+
+        private static readonly string[] s_dispositivos = new[]
+        {
+            "Smartphone", "Tablet", "Notebook", "Desktop"
+        };
 
         public Pessoa()
         {

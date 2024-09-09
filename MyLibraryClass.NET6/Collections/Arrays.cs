@@ -1,3 +1,5 @@
+using MyLibraryClass.NET6.Models;
+
 namespace MyLibraryClass.NET6.Collections
 {
     public class Arrays
@@ -14,17 +16,32 @@ namespace MyLibraryClass.NET6.Collections
             int[] array3 = { 1, 2, 3, 4 };
             var array4 = new int[] { 1, 2, 3, 4 };
 
-            string[] WeekDays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            string[] WeekDays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             string monday = WeekDays[0];
 
-            for (var i = 0; i < WeekDays.Length; i++) 
+            for (var i = 0; i < WeekDays.Length; i++)
             {
                 Console.WriteLine(WeekDays[i]);
             }
 
-            foreach (string day in WeekDays) 
+            foreach (string day in WeekDays)
             {
                 Console.WriteLine(day);
+            }
+
+            Enumerable.Range(0, 5).Select(x => new { Id = x, Name = $"Name {x}" }).ToArray();
+
+            Pessoa[] pessoas = Enumerable.Range(0, 5).Select(index => new Pessoa
+            {
+                Nome = $"Name {index}",
+                Idade = index
+            })
+            .ToArray();
+
+            foreach (Pessoa pessoa in pessoas)
+            {
+                Console.WriteLine(pessoa.Nome);
+                Console.WriteLine(pessoa.Idade);
             }
         }
 

@@ -15,9 +15,19 @@ namespace MyWebAPI.NET6.Controllers
         }
 
         [HttpGet("contacts")]
-        public IActionResult List(string nome)
+        public IActionResult List(string? nome)
         {
-            var contacts = _context.Contacts.Where(x => x.Nome.Contains(nome));
+            IQueryable<Contact> contacts; // Explicitly define the type
+
+            if (string.IsNullOrEmpty(nome))
+            {
+                contacts = _context.Contacts;
+            }
+            else
+            {
+                contacts = _context.Contacts.Where(x => x.Nome.Contains(nome));
+            }
+
             return Ok(contacts);
         }
 
@@ -37,24 +47,24 @@ namespace MyWebAPI.NET6.Controllers
         {
             _context.Add(contact);
             _context.SaveChanges();
-            //return Ok(contact);
             return CreatedAtAction(nameof(View), new { id = contact.Id }, contact);
         }
 
         [HttpPut("contact/{id}")]
         public IActionResult Edit(int id, Contact contact)
         {
-            var contact2 = _context.Contacts.Find(id);
+            var existentContact = _context.Contacts.Find(id);
 
-            if (contact2 == null)
+            if (existentContact == null)
                 return NotFound();
 
-            contact2.Nome = contact.Nome;
-            contact2.Status = contact.Status;
+            existentContact.Nome = contact.Nome;
+            existentContact.Email = contact.Email;
+            existentContact.Status = contact.Status;
 
-            _context.Contacts.Update(contact2);
+            _context.Contacts.Update(existentContact);
             _context.SaveChanges();
-            return Ok(contact2);
+            return Ok(existentContact);
         }
 
         [HttpDelete("contact/{id}")]
@@ -69,6 +79,18 @@ namespace MyWebAPI.NET6.Controllers
             _context.SaveChanges();
 
             return NoContent();
+        }
+
+        [HttpGet("contact/list")]
+        public IEnumerable<Contact> List()
+        {
+            return Enumerable.Range(0, 5).Select(index => new Contact
+            {
+                Id = index,
+                Nome = $"Name {index}",
+                Status = (index % 2 == 0 ? true : false)
+            })
+            .ToArray();
         }
     }
 }
