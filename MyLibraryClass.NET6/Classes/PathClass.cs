@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace MyLibraryClass.NET6.Classes
 {
     public class PathClass
