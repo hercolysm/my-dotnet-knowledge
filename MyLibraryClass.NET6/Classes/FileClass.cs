@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace MyLibraryClass.NET6.Classes
 {
     public class FileClass
