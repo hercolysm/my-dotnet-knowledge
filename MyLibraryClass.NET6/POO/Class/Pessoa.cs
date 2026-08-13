@@ -8,7 +8,7 @@ namespace MyLibraryClass.NET6.Models
     public class Pessoa
     {
         private string? _nome;
-        public string? SobreNome { get; private set; }
+        public string? SobreNome { get; set; }
         public string? NomeCompleto => $"{Nome} {SobreNome}".ToUpper();
         public int Idade { get; set; }
         public decimal Peso { get; set; }
@@ -17,7 +17,7 @@ namespace MyLibraryClass.NET6.Models
         public List<Pessoa>? Filhos { get; set; }
         public static string NomeDaClasse = "Pessoa";
         public decimal? PodeSerNulo { get; set; }
-        public Enumerable Sexo = new Enumerable { Masculino, Feminino };
+        public Sexo Sexo { get; private set; }
 
         // data annotations
         [Required(ErrorMessage = "O e-mail é obrigatório")]
@@ -83,5 +83,11 @@ namespace MyLibraryClass.NET6.Models
         {
             return NomeDaClasse;
         }
+    }
+
+    public enum Sexo
+    {
+        Masculino,
+        Feminino
     }
 }
